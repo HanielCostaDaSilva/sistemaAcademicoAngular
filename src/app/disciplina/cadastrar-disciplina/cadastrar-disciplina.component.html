@@ -1,0 +1,16 @@
+<mat-card class="card-cadastro">
+  <mat-card-title> Cadastrar Disciplina</mat-card-title>
+    <mat-card-content>
+      <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="nome" placeholder="Digite o nome da Disciplina">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="descricao" placeholder="Digite a descricao da Disciplina">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="cadastrar()">{{nomeButton}}</button>
+    </mat-card-actions>
+  </mat-card>
+  

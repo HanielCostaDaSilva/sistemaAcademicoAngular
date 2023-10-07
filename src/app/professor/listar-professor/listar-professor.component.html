@@ -1,0 +1,22 @@
+<div>
+    <mat-icon [matBadge]="professores.length" matBadgeColor="primary">badge</mat-icon>
+</div>
+<div fxLayout="row wrap" fxLayout.lt-sm="column">
+    <mat-card fxFlex="20" class="card-professor" *ngFor="let professor of professores">
+        <mat-card-header>
+            <mat-card-title>{{professor.nome | titlecase}}</mat-card-title>
+            <mat-card-subtitle >Matricula: {{professor.matricula}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            idade: {{professor.idade}}
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button [routerLink]="['/editaprofessor', professor.matricula]">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-button (click)="excluir(professor)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</div>

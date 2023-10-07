@@ -1,0 +1,23 @@
+<mat-card class="card-cadastro">
+    <mat-card-title> Cadastrar Professor</mat-card-title>
+      <mat-card-content>
+        <mat-form-field appearance="fill">
+          <input matInput [(ngModel)]="nome" placeholder="Digite o nome">
+        </mat-form-field>
+        <br>
+        
+        <mat-form-field appearance="fill">
+          <input type="number" matInput [(ngModel)]="idade" placeholder="Digite a idade">
+        </mat-form-field>
+        <br>
+        
+        <mat-form-field appearance="fill">
+            <input type="number" matInput [(ngModel)]="matricula" placeholder="Digite a matricula">
+        </mat-form-field>
+
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="cadastrar()">{{nomeButton}}</button>
+      </mat-card-actions>
+    </mat-card>
+    
